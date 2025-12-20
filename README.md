@@ -9,7 +9,10 @@ Code repository for the paper:
 ![teaser](assets/teaser.jpg)
 
 ## News
-
+- [2025/12] 
+- Added code from [Mano2Smplx](https://github.com/VincentHu19/Mano2Smpl-X) and a notebook where it was converted to use with PKL of GVHMR and HAMER 
+- Added code to export Mano Parameters to use with Mano2SMPLX
+- Added Blend File [(on the releases)](https://github.com/carlosedubarreto/hamer/releases/tag/blend_file_v1) with script and SMPLX Body [SMPLX Body License](https://smpl-x.is.tue.mpg.de/bodylicense.html)
 - [2024/06] HaMeR received the 2nd place award in the Ego-Pose Hands task of the Ego-Exo4D Challenge! Please check the [validation report](https://www.cs.utexas.edu/~pavlakos/hamer/resources/egoexo4d_challenge.pdf).
 - [2024/05] We have released the evaluation pipeline!
 - [2024/05] We have released the HInt dataset annotations! Please check [here](https://github.com/ddshan/hint).
