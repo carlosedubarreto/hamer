@@ -14,18 +14,6 @@ from hamer.utils import recursive_to
 from hamer.datasets.vitdet_dataset import ViTDetDataset, DEFAULT_MEAN, DEFAULT_STD
 from hamer.utils.renderer import Renderer, cam_crop_to_full
 
-
-import sys
-# 1. Get the current working directory (where the script is being executed from)
-script_file_path = os.path.abspath(__file__)
-# 2. Extract the directory name from the full path
-script_path = os.path.dirname(script_file_path)
-# 2. Add the path to sys.path
-# sys.path is a list of strings that determines the module search path.
-if script_path not in sys.path:
-    sys.path.append(script_path)
-
-
 LIGHT_BLUE=(0.65098039,  0.74117647,  0.85882353)
 
 from vitpose_model import ViTPoseModel
@@ -105,12 +93,12 @@ def main():
     renderer = Renderer(model_cfg, faces=model.mano.faces)
 
     # Make output directory if it does not exist
-    # os.makedirs(args.out_folder, exist_ok=True)
-    if os.path.exists(args.out_folder):
-        shutil.rmtree(args.out_folder)
-        os.mkdir(args.out_folder)
-    else:
-        os.mkdir(args.out_folder)
+    os.makedirs(args.out_folder, exist_ok=True)
+    # if os.path.exists(args.out_folder):
+    #     shutil.rmtree(args.out_folder)
+    #     os.mkdir(args.out_folder)
+    # else:
+    #     os.mkdir(args.out_folder)
 
     
     #get the path to this script
