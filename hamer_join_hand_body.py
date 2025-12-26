@@ -43,7 +43,7 @@ with(open(file, "rb")) as f:
 
 pkl_out = os.path.join(os.path.dirname(file),"_BodyNone_Hammer_Final_com_mao.pkl")
 
-
+qtd = min(pkl_hamer['lh_global_orient'].shape[0],pkl_hamer["rh_global_orient"].shape[0])
 
 ####################
 ## Body selection
@@ -74,7 +74,7 @@ if args.body == "phmr":
     smplx_params["transl"] = pkl_phmr[num_phmr_pessoa]["trans"]
 
 
-qtd = min(pkl_hamer['lh_global_orient'].shape[0],smplx_params["global_orient"].shape[0])
+qtd = min(pkl_hamer['lh_global_orient'].shape[0],pkl_hamer["rh_global_orient"].shape[0],smplx_params["global_orient"].shape[0])
 
 # qtd=55
 M = np.diag([-1, 1, 1])                                                                                                              # Preparing for the left hand switch
